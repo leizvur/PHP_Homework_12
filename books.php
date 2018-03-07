@@ -26,32 +26,30 @@ $res=mysqli_query($connect, $sql);
 	</style>
 </head>
 <body>
-
-</body>
-</html>
-<h1>Библиотека успешного человека</h1>
-<table>
-	<thead>
-		<th>Название</th>
-		<th>Автор</th>
-		<th>Год выпуска</th>
-		<th>Жанр</th>
-		<th>ISBN</th>
-	</thead>
+	<h1>Библиотека успешного человека</h1>
+	<table>
+		<thead>
+			<th>Название</th>
+			<th>Автор</th>
+			<th>Год выпуска</th>
+			<th>Жанр</th>
+			<th>ISBN</th>
+		</thead>
 	    <?php
 		while ($data=mysqli_fetch_array($res))
 		{?>
-	<tbody>
-		<tr>
-			<td><?php echo $data["name"] ?></td>
-			<td><?php echo $data["author"] ?></td>
-			<td><?php echo $data["year"] ?></td>
-			<td><?php echo $data["genre"] ?></td>
-			<td><?php echo $data["isbn"] ?></td>
-		</tr>
-	</tbody>
+		<tbody>
+			<tr>
+				<td><?php echo $data["name"] ?></td>
+				<td><?php echo $data["author"] ?></td>
+				<td><?php echo $data["year"] ?></td>
+				<td><?php echo $data["genre"] ?></td>
+				<td><?php echo $data["isbn"] ?></td>
+			</tr>
+		</tbody>
 		<?php
 		}
-
-			?>
-</table>
+		?>
+	</table>
+</body>
+</html>
